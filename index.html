@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Design with Slideshow</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="website icon" href="imag/Green Brown Illustration Clothes Fashion Logo for Store_20241213_141731_۰۰۰۰.png">
+    
+</head>
+<body>
+    <!-- هدر -->
+    <header>
+        <div class="logo">لوگو</div>
+        <div class="search-bar">
+            <input type="text" placeholder="جستجوی محصولات...">
+        </div>
+        <div class="icons">
+            <a href="#">ورود / ثبت‌نام</a>
+            <a href="#">❤ علاقه‌مندی‌ها</a>
+            <a href="#">🛒 سبد خرید</a>
+        </div>
+    </header>
+    
+    <!-- ناوبری -->
+    <nav>
+        <a href="#">شومیز</a>
+        <a href="#">تونیک</a>
+        <a href="#">مانتو</a>
+        <a href="#">پیراهن‌ها</a>
+        <a href="#">دامن</a>
+        <a href="#">شلوار</a>
+        <a href="#">سایز بزرگ‌ها</a>
+    </nav>
+    
+    <!-- <اسلاید> -->
+<input type="radio" id="trigger1" name="slider">
+<label for="trigger1"><span class="sr-only">Slide 1 of 5. A photo of a mountain pass with a winding path along the river and a view of distant mountains hiding in the mist.</span></label>
+<div class="slide bg1"></div>
+
+<input type="radio" id="trigger2" name="slider" checked autofocus>
+<label for="trigger2"><span class="sr-only">Slide 2 of 5. A photo of a bird eating sunflower seeds from an open hand.</span></label>
+<div class="slide bg2"></div>
+
+<input type="radio" id="trigger3" name="slider">
+<label for="trigger3"><span class="sr-only">Slide 3 of 5. A photo of a concrete bridge over the river with high voltage power lines on both banks.</span></label>
+<div class="slide bg3"></div>
+
+<input type="radio" id="trigger4" name="slider">
+<label for="trigger4"><span class="sr-only">Slide 4 of 5. A photo of a lake surrounded by the forest with mountains in the background.</span></label>
+<div class="slide bg4"></div>
+
+<input type="radio" id="trigger5" name="slider">
+<label for="trigger5"><span class="sr-only">Slide 5 of 5. A photo of a forest.</span></label>
+<div class="slide bg5"></div>
+<script>
+  let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+const radios = document.querySelectorAll('input[name="slider"]');
+
+// تغییر اسلاید به صورت خودکار هر 3 ثانیه
+function autoSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    radios[currentSlide].checked = true; // فعال‌سازی رادیوی متناظر با اسلاید
+}
+
+// تنظیم تابع برای تغییر خودکار
+// setInterval(autoSlide, 3000);
+</script>
+</body>
+</html>
